@@ -2,7 +2,7 @@
 
 ![Trainnect LLM Council](header.png)
 
-> **Collective AI Intelligence** — Instead of asking one LLM, convene a council of AI models that deliberate, peer-review, and synthesize the best answer.
+> **Collective AI Intelligence** — Convene a council of up to 8 AI models that deliberate, peer-review, and synthesize the best solutions.
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![React](https://img.shields.io/badge/React-19-61DAFB.svg)](https://reactjs.org/)

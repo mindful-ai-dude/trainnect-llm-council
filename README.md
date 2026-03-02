@@ -597,11 +597,11 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## Contributing
 
-Contributions are welcome! This project embraces the spirit of "vibe coding" - feel free to fork and make it your own.
+Contributions are welcome!.
 
 ---
 
 <p align="center">
-  <strong>Built with the collective wisdom of AI</strong><br>
-  <em>Ask the council. Get better answers.</em>
+  <strong>Built with the collective wisdom of Humans and AI</strong><br>
+  <em>Consult the Council.</em>
 </p>

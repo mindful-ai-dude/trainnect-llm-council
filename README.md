@@ -487,7 +487,7 @@ data/
 
 ## Credits & Acknowledgements
 
-This project is a fork and enhancement of the original **[llm-council](https://github.com/karpathy/llm-council)** by **[Andrej Karpathy](https://github.com/karpathy)** and  **[llm-council-plus](https://github.com/DmitryBMsk/llm-council-plus)** by **[Dmitrii Bakhtin]** @DmitryBMsk
+This project is a fork and enhancement of the original **[llm-council](https://github.com/karpathy/llm-council)** by **[Andrej Karpathy](https://github.com/karpathy)** and  **[llm-council-plus](https://github.com/DmitryBMsk/llm-council-plus)** by **[Dmitrii Bakhtin]**
 
 **Trainnect LLM Council** builds upon the original "vibe coded" foundation with:
 - Multi-provider support (OpenRouter, Ollama, Groq, Direct APIs, Custom endpoints)

@@ -13,7 +13,7 @@
 
 ## What is Trainnect LLM Council?
 
-Instead of asking a single LLM (like ChatGPT or Claude) for an answer, **Trainnect LLM Council** assembles a council of multiple AI models that:
+Instead of asking a single LLM (like ChatGPT or Claude) for an answer, **Trainnect LLM Council** assembles a council of up to 8 AI models that:
 
 1. **Independently answer** your question (Stage 1)
 2. **Anonymously peer-review** each other's responses (Stage 2)
@@ -21,30 +21,18 @@ Instead of asking a single LLM (like ChatGPT or Claude) for an answer, **Trainne
 
 The result? More balanced, accurate, and thoroughly vetted responses that leverage the collective intelligence of multiple AI models.
 
-<p align="center">
-  <div align="center">
-    <a href="https://www.youtube.com/watch?v=HOdyIyccOCE" target="_blank">
-      <img src="https://img.youtube.com/vi/HOdyIyccOCE/hqdefault.jpg" alt="Trainnect LLM Council Long Demo" width="48%">
-    </a>
-    <a href="https://www.youtube.com/watch?v=NUmQFGAwD3g" target="_blank">
-      <img src="https://img.youtube.com/vi/NUmQFGAwD3g/hqdefault.jpg" alt="Trainnect LLM Council Short Demo" width="48%">
-    </a>
-  </div>
-</p>
-
 ---
 
 ## Installation
 
 ```bash
 # Clone and install
-git clone https://github.com/jacob-bd/llm-council-plus.git
-cd llm-council-plus
-uv sync                    # Backend dependencies
-cd frontend && npm install # Frontend dependencies
+git clone https://github.com/mindful-ai-dude/trainnect-llm-council
+cd trainnect-llm-council
+uv sync                    
 
 # Run (from project root)
-./start.sh
+./start.sh # Backend and Frontend Dependencies and Startup
 ```
 
 Then open **http://localhost:5173** and configure your API keys in Settings.
@@ -57,44 +45,44 @@ Then open **http://localhost:5173** and configure your API keys in Settings.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        YOUR QUESTION                             │
+│                        YOUR QUESTION                            │
 │  ┌─────────────────────────┐  ┌─────────────────────────────┐   │
-│  │ 🔍 Web Search            │  │ 📎 File Upload (PDF, MD,    │   │
-│  │   (real-time info)       │  │    CSV, TXT)                │   │
+│  │ 🔍 Web Search           │  │ 📎 File Upload (PDF, MD,    │   │
+│  │   (real-time info)      │  │    CSV, TXT)                │   │
 │  └─────────────────────────┘  └─────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                    STAGE 1: DELIBERATION                         │
+│                    STAGE 1: DELIBERATION                        │
 │  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐             │
-│  │ Claude  │  │  GPT-4  │  │ Gemini  │  │  Llama  │  ...        │
+│  │ Minimax │  │  GLM-5  │  │ Mistral │  │  Qwen   │  ...        │
 │  └────┬────┘  └────┬────┘  └────┬────┘  └────┬────┘             │
-│       │            │            │            │                   │
-│       ▼            ▼            ▼            ▼                   │
-│  Response A   Response B   Response C   Response D               │
+│       │            │            │            │                  │
+│       ▼            ▼            ▼            ▼                  │
+│  Response A   Response B   Response C   Response D              │
 └─────────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                    STAGE 2: PEER REVIEW                          │
-│  Each model reviews ALL responses (anonymized as A, B, C, D)     │
-│  and ranks them by accuracy, insight, and completeness           │
-│                                                                   │
-│  Rankings are aggregated to identify the best responses          │
+│                    STAGE 2: PEER REVIEW                         │
+│  Each model reviews ALL responses (anonymized as A, B, C, D)    │
+│  and ranks them by accuracy, insight, and completeness          │
+│                                                                 │
+│  Rankings are aggregated to identify the best responses         │
 └─────────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                    STAGE 3: SYNTHESIS                            │
+│                    STAGE 3: SYNTHESIS                           │
 │  ┌─────────────────────────────────────────────────────────┐    │
-│  │                    CHAIRMAN MODEL                        │    │
-│  │  Reviews all responses + rankings + search context       │    │
-│  │  Synthesizes the council's collective wisdom             │    │
+│  │                    CHAIRMAN MODEL                       │    │
+│  │  Reviews all responses + rankings + search context      │    │
+│  │  Synthesizes the council's collective wisdom            │    │
 │  └─────────────────────────────────────────────────────────┘    │
-│                              │                                   │
-│                              ▼                                   │
-│                      FINAL ANSWER                                │
+│                              │                                  │
+│                              ▼                                  │
+│                      FINAL ANSWER                               │
 └─────────────────────────────────────────────────────────────────┘
 ```
 

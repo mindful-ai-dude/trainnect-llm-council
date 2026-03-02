@@ -1,0 +1,19 @@
+[project]
+name = "trainnect-llm-council"
+version = "0.2.2"
+description = "Trainnect LLM Council - Your Advanced AI Council"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "python-dotenv",
+    "httpx",
+    "pydantic",
+    "ddgs",
+    "yake",
+    "pypdf",
+    "pytest",
+    "pytest-asyncio",
+    "python-multipart",
+]

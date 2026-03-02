@@ -514,6 +514,93 @@ We gratefully acknowledge Andrej Karpathy for the original inspiration and codeb
 
 ---
 
+## Git Workflow for Beginners
+
+If you're new to Git and want to contribute or push changes to GitHub, here are the essential commands:
+
+### Initial Setup (First Time Only)
+
+```bash
+# Clone the repository
+git clone https://github.com/mindful-ai-dude/trainnect-llm-council.git
+cd trainnect-llm-council
+
+# Configure your identity (only needed once per machine)
+git config user.name "Your Name"
+git config user.email "your.email@example.com"
+```
+
+### Daily Workflow
+
+```bash
+# Check which files have changed
+git status
+
+# Stage all changes (add modified files to the "staging area")
+git add -A
+
+# Or stage specific files only
+git add filename.py
+
+# Create a commit with a descriptive message
+git commit -m "Add feature: description of what you changed"
+
+# Push your changes to GitHub
+git push origin main
+```
+
+### Common Commands
+
+| Command | Description |
+|---------|-------------|
+| `git status` | See which files have been modified |
+| `git add -A` | Stage all changes for commit |
+| `git add <file>` | Stage a specific file |
+| `git commit -m "message"` | Save staged changes with a message |
+| `git push` | Upload commits to GitHub |
+| `git pull` | Download latest changes from GitHub |
+| `git log` | View commit history |
+| `git diff` | See what changed in your files |
+
+### Undoing Changes
+
+```bash
+# Unstage a file (keep changes, just don't commit them yet)
+git reset HEAD filename.py
+
+# Discard changes in a file (⚠️ permanent!)
+git checkout -- filename.py
+
+# Amend the last commit (if you forgot something)
+git commit --amend -m "New commit message"
+
+# See what will be committed before committing
+git diff --staged
+```
+
+### Working with Branches (Optional but Recommended)
+
+```bash
+# Create a new branch for your feature
+git checkout -b my-new-feature
+
+# Switch back to main
+git checkout main
+
+# Merge your feature branch into main
+git merge my-new-feature
+```
+
+### Important Tips
+
+- **Always run `git status`** before committing to see what you're about to commit
+- **Write meaningful commit messages** - describe what you changed and why
+- **Commit often** - small, frequent commits are better than huge ones
+- **Pull before you push** - always `git pull` first if others might have changed the repo
+- **The `.gitignore` file** lists files that should NOT be committed (like API keys, node_modules, data files)
+
+---
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.

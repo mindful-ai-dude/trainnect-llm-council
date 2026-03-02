@@ -13,7 +13,7 @@
 
 ## What is Trainnect LLM Council?
 
-Instead of asking a single LLM (like ChatGPT or Claude) for an answer, **Trainnect LLM Council** assembles a council of up to 8 AI models that:
+**Trainnect LLM Council** assembles a council of up to 8 AI models that:
 
 1. **Independently answer** your question (Stage 1)
 2. **Anonymously peer-review** each other's responses (Stage 2)
